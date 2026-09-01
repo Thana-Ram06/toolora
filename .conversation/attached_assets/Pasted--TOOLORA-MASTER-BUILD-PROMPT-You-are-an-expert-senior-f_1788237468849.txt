@@ -1,0 +1,1482 @@
+# TOOLORA — MASTER BUILD PROMPT
+
+You are an expert senior full-stack developer, UI/UX designer, and product engineer.
+
+Build a complete, production-ready website called **Toolora** — a free, modern, all-in-one online tools platform.
+
+## 1. CORE PRODUCT
+
+Toolora provides a large collection of useful online tools for everyday users, creators, students, designers, and developers.
+
+Primary tagline:
+
+**"Simple tools. Zero hassle."**
+
+Secondary description:
+
+**"Free online tools for everyday things — compress, convert, calculate, generate, format, and more."**
+
+The website must feel like a real polished SaaS/product website, NOT like a generic developer dashboard or a basic collection of HTML tools.
+
+Every tool should be easy to discover, easy to use, fast, and visually consistent.
+
+---
+
+# 2. VERY IMPORTANT — VERCEL COMPATIBILITY
+
+I will deploy this project on **Vercel**.
+
+Therefore:
+
+### STRICT REQUIREMENT:
+
+Build the entire project to be **fully Vercel-friendly from the beginning**.
+
+Do NOT use anything that will cause deployment problems on Vercel.
+
+Prefer a modern frontend architecture such as:
+
+* React
+* Next.js with App Router
+* TypeScript
+* Tailwind CSS
+
+Use Next.js if it provides the cleanest Vercel deployment.
+
+### Avoid:
+
+* Replit-specific runtime dependencies
+* Replit databases
+* Replit authentication
+* Replit-only APIs
+* Long-running server processes
+* Local filesystem persistence
+* Anything that requires a permanently running backend
+* Hardcoded localhost URLs
+* Environment-specific hacks
+* Features that only work inside Replit
+
+The final project must be deployable to Vercel using the standard build process.
+
+Use client-side/browser APIs wherever practical.
+
+For file-processing tools, process files locally in the browser whenever technically possible so that files do not need to be uploaded to a server.
+
+---
+
+# 3. DESIGN DIRECTION
+
+The visual style should be inspired by the clean, minimal, modern, friendly design language of:
+
+https://www.nearmate.io/
+
+IMPORTANT:
+
+Do NOT copy Nearmate's website, text, assets, illustrations, branding, or exact layouts.
+
+Use only its general design philosophy as inspiration.
+
+Toolora should have its own identity.
+
+### Design characteristics:
+
+* Minimal
+* Premium
+* Friendly
+* Modern
+* Spacious
+* Clean
+* Light
+* Highly usable
+* Strong typography
+* Rounded cards
+* Subtle borders
+* Soft shadows
+* Lots of whitespace
+* Smooth micro-interactions
+* Mobile-first responsive design
+
+Avoid:
+
+* Overly complicated dashboards
+* Excessive gradients
+* Neon colors
+* Excessive glassmorphism
+* Huge unnecessary animations
+* Clutter
+* Too many colors
+* Generic bootstrap-looking UI
+
+---
+
+# 4. COLOR SYSTEM
+
+Use a warm/light background similar in feeling to modern premium websites.
+
+Suggested palette:
+
+Background:
+#FAFAF7
+
+Primary text:
+#111111
+
+Secondary text:
+#6B6B67
+
+Accent green:
+#B7F34A
+
+White cards:
+#FFFFFF
+
+Borders:
+#E8E8E3
+
+The green accent should be used selectively for:
+
+* Primary buttons
+* Active states
+* Important highlights
+* Small decorative elements
+* Hover states
+* Tool icons when appropriate
+
+Do not make the entire website green.
+
+Use CSS variables/design tokens so the color system can easily be changed later.
+
+---
+
+# 5. TYPOGRAPHY
+
+Use a clean modern sans-serif font.
+
+Prefer:
+
+**Inter**
+
+or another excellent modern sans-serif available through a reliable web font implementation.
+
+Typography should have:
+
+* Large bold hero headings
+* Strong section headings
+* Comfortable paragraph spacing
+* Clear hierarchy
+* Excellent mobile readability
+
+Avoid excessive font weights and decorative typography.
+
+---
+
+# 6. BRAND
+
+Brand name:
+
+# Toolora
+
+Logo should be simple and text-based with a small distinctive visual mark if appropriate.
+
+Do NOT use an external copyrighted logo.
+
+Create the logo using CSS/SVG.
+
+Navbar:
+
+Toolora logo on the left.
+
+Navigation:
+
+* Tools
+* Categories
+* About
+
+Right side:
+
+* Search
+* "Explore Tools" CTA
+
+On mobile, use a clean hamburger menu.
+
+Navbar should remain simple and uncluttered.
+
+---
+
+# 7. HOMEPAGE
+
+Create a beautiful landing page.
+
+Hero section:
+
+Large headline:
+
+**"Simple tools. Zero hassle."**
+
+Supporting text:
+
+**"Free online tools for everyday things. Compress, convert, calculate, generate, format, and more."**
+
+Below it:
+
+Large tool search bar:
+
+**"Search 100+ free tools..."**
+
+Include search icon.
+
+Search must actually work.
+
+Users should be able to search tools by:
+
+* Tool name
+* Description
+* Category
+* Keywords
+
+Hero CTA:
+
+**Explore Tools**
+
+Secondary CTA:
+
+**Popular Tools**
+
+---
+
+# 8. POPULAR TOOLS
+
+Create a visually attractive section called:
+
+**Popular tools**
+
+Show approximately 8–12 tools.
+
+Examples:
+
+* Image Compressor
+* Image Resizer
+* JPG to PNG
+* Image to PDF
+* PDF Merger
+* QR Code Generator
+* Word Counter
+* JSON Formatter
+* Password Generator
+* Color Picker
+
+Use modern rounded cards.
+
+Each card should contain:
+
+* Simple icon
+* Tool name
+* Short description
+* Small arrow
+* Hover interaction
+
+Cards should feel premium and spacious.
+
+---
+
+# 9. TOOL CATEGORIES
+
+Create a section:
+
+**Explore all tools**
+
+Categories:
+
+### 🖼 Image Tools
+
+### 📄 PDF Tools
+
+### ✍️ Text Tools
+
+### 💻 Developer Tools
+
+### 🔐 Security Tools
+
+### 🎨 Color Tools
+
+### 🔢 Calculator Tools
+
+### 📅 Date & Time Tools
+
+### 🌐 Web Tools
+
+Each category should have:
+
+* Icon
+* Name
+* Short description
+* Number of tools
+* Link to category
+
+---
+
+# 10. TOOL LIBRARY PAGE
+
+Create:
+
+`/tools`
+
+This page should contain the complete tool directory.
+
+At the top:
+
+**All Tools**
+
+Search bar.
+
+Category filters.
+
+Sort options:
+
+* Popular
+* A–Z
+* Newest
+
+Tool cards should be responsive.
+
+Desktop:
+3–4 columns depending on screen width.
+
+Tablet:
+2 columns.
+
+Mobile:
+1 column.
+
+---
+
+# 11. CATEGORY PAGES
+
+Create dynamic category pages.
+
+Examples:
+
+`/tools/image`
+
+`/tools/pdf`
+
+`/tools/text`
+
+`/tools/developer`
+
+`/tools/security`
+
+`/tools/color`
+
+`/tools/calculator`
+
+`/tools/date-time`
+
+`/tools/web`
+
+Each category page should have:
+
+* Category title
+* Description
+* Search within category
+* Tool grid
+* Breadcrumb
+* Related tools
+
+---
+
+# 12. TOOL PAGE TEMPLATE
+
+Every individual tool must have its own clean route.
+
+Example:
+
+`/tools/image-compressor`
+
+The tool page should contain:
+
+1. Breadcrumb
+2. Tool title
+3. Short description
+4. Main tool interface
+5. How it works
+6. Features
+7. FAQ
+8. Related tools
+
+Example heading:
+
+**Image Compressor**
+
+Description:
+
+**"Reduce image file size while keeping your images looking great."**
+
+The actual tool interface should be the main focus.
+
+---
+
+# 13. IMPORTANT — TOOLS MUST ACTUALLY WORK
+
+Do NOT create fake tool interfaces.
+
+Every tool included in the first release must be functional.
+
+If a tool can be implemented entirely in the browser, implement it client-side.
+
+Use established open-source libraries where appropriate.
+
+Do not invent fake processing results.
+
+---
+
+# 14. FIRST RELEASE TOOLS
+
+Implement these tools first and make every one functional.
+
+## IMAGE TOOLS
+
+### 1. Image Compressor
+
+Features:
+
+* Upload images
+* Drag & drop
+* JPG
+* PNG
+* WebP where practical
+* Quality slider
+* Show original size
+* Show compressed size
+* Show percentage reduction
+* Download result
+* Multiple images if practical
+
+### 2. Image Resizer
+
+Features:
+
+* Upload
+* Width
+* Height
+* Lock aspect ratio
+* Presets
+* Download
+
+### 3. Image Cropper
+
+Features:
+
+* Upload
+* Crop area
+* Aspect ratio presets
+* Free crop
+* Download
+
+### 4. Image Converter
+
+Support common conversions:
+
+* JPG
+* PNG
+* WebP
+
+### 5. JPG to PNG
+
+### 6. PNG to JPG
+
+### 7. JPG to WebP
+
+### 8. WebP to JPG
+
+### 9. Image to PDF
+
+Features:
+
+* Multiple images
+* Reorder
+* Page size
+* Orientation
+* Merge into one PDF
+* Download
+
+### 10. Image Color Picker
+
+Upload image and click pixels to retrieve:
+
+* HEX
+* RGB
+* HSL
+
+---
+
+# 15. PDF TOOLS
+
+Implement:
+
+### 11. PDF Merger
+
+* Multiple PDF upload
+* Reorder
+* Merge
+* Download
+
+### 12. PDF Splitter
+
+* Upload PDF
+* Select pages/ranges
+* Export
+
+### 13. PDF to Images
+
+* Upload PDF
+* Convert pages to JPG/PNG
+* Download
+
+### 14. Images to PDF
+
+### 15. PDF Page Rotator
+
+* Upload
+* Rotate pages
+* Export
+
+### 16. PDF Page Extractor
+
+* Select pages
+* Create new PDF
+
+### 17. PDF Metadata Viewer
+
+Show available metadata safely.
+
+Do not claim metadata exists if it does not.
+
+---
+
+# 16. TEXT TOOLS
+
+### 18. Word Counter
+
+Show:
+
+* Words
+* Characters
+* Characters without spaces
+* Sentences
+* Paragraphs
+* Reading time
+
+### 19. Character Counter
+
+### 20. Text Case Converter
+
+Support:
+
+* UPPERCASE
+* lowercase
+* Title Case
+* Sentence case
+* camelCase
+* snake_case
+* kebab-case
+
+### 21. Remove Duplicate Lines
+
+### 22. Remove Extra Spaces
+
+### 23. Sort Lines
+
+Support:
+
+* A–Z
+* Z–A
+* Numeric
+
+### 24. Reverse Text
+
+### 25. Lorem Ipsum Generator
+
+### 26. Text Diff Checker
+
+Allow users to paste two texts and visually highlight differences.
+
+---
+
+# 17. DEVELOPER TOOLS
+
+### 27. JSON Formatter
+
+Features:
+
+* Format
+* Validate
+* Minify
+* Copy
+* Clear
+
+### 28. JSON Validator
+
+### 29. HTML Formatter
+
+### 30. CSS Formatter
+
+### 31. JavaScript Formatter
+
+### 32. HTML Minifier
+
+### 33. CSS Minifier
+
+### 34. JavaScript Minifier
+
+### 35. Base64 Encoder
+
+### 36. Base64 Decoder
+
+### 37. URL Encoder
+
+### 38. URL Decoder
+
+### 39. UUID Generator
+
+### 40. JWT Decoder
+
+Important:
+JWT decoder must clearly state that decoding a JWT does NOT verify its signature.
+
+### 41. Hash Generator
+
+Support browser-safe hashing such as:
+
+* SHA-256
+* SHA-384
+* SHA-512
+
+### 42. Regex Tester
+
+Allow:
+
+* Regex input
+* Test text
+* Match highlighting
+* Match count
+
+---
+
+# 18. SECURITY / RANDOM TOOLS
+
+### 43. Password Generator
+
+Options:
+
+* Length
+* Uppercase
+* Lowercase
+* Numbers
+* Symbols
+
+Show password strength.
+
+Passwords should be generated locally in the browser.
+
+### 44. Random Number Generator
+
+### 45. Random String Generator
+
+### 46. Hash Generator
+
+---
+
+# 19. COLOR TOOLS
+
+### 47. Color Picker
+
+### 48. HEX to RGB
+
+### 49. RGB to HEX
+
+### 50. HEX to HSL
+
+### 51. Gradient Generator
+
+### 52. Color Palette Generator
+
+### 53. Contrast Checker
+
+Show WCAG-style contrast information where technically appropriate.
+
+---
+
+# 20. CALCULATOR TOOLS
+
+### 54. Basic Calculator
+
+### 55. Percentage Calculator
+
+### 56. Discount Calculator
+
+### 57. GST Calculator
+
+Make the GST percentage customizable.
+
+### 58. Age Calculator
+
+### 59. Date Difference Calculator
+
+### 60. Average Calculator
+
+### 61. Fraction Calculator
+
+---
+
+# 21. DATE & TIME TOOLS
+
+### 62. Stopwatch
+
+### 63. Countdown Timer
+
+### 64. Age Calculator
+
+### 65. Date Calculator
+
+### 66. Unix Timestamp Converter
+
+### 67. Working Days Calculator
+
+### 68. Leap Year Checker
+
+---
+
+# 22. WEB TOOLS
+
+### 69. QR Code Generator
+
+Support:
+
+* URL
+* Text
+* Email
+* Phone
+* Wi-Fi
+
+Allow:
+
+* Size
+* Error correction where practical
+* Download PNG/SVG if supported
+
+### 70. URL Parser
+
+### 71. Meta Tag Generator
+
+### 72. Open Graph Generator
+
+### 73. Robots.txt Generator
+
+### 74. Sitemap Generator
+
+### 75. Favicon Generator
+
+---
+
+# 23. PRIVACY
+
+This is very important.
+
+Wherever possible:
+
+**Process files locally in the browser.**
+
+Do not upload user files to a server unless absolutely required.
+
+On file-based tools display a small privacy note:
+
+**"Your files are processed locally in your browser and aren't uploaded."**
+
+Only display this statement where it is technically true.
+
+Do NOT make false privacy claims.
+
+---
+
+# 24. TOOL UX
+
+Every tool should have:
+
+* Drag & drop where relevant
+* Clear upload button
+* Paste support where relevant
+* Clear/reset button
+* Copy button where relevant
+* Download button
+* Error handling
+* Loading state where required
+* Empty state
+* Success state
+* Mobile-friendly controls
+
+Use toast notifications for:
+
+* Copied
+* Downloaded
+* Error
+* Invalid input
+
+---
+
+# 25. DRAG & DROP
+
+For file tools:
+
+Create a beautiful drag-and-drop zone.
+
+Example:
+
+"Drop your files here"
+
+Then:
+
+"or choose files"
+
+Use subtle hover/drag states.
+
+Show selected files as clean cards.
+
+---
+
+# 26. RESPONSIVE DESIGN
+
+The entire website must be fully responsive.
+
+Test mentally and structurally for:
+
+* 320px mobile
+* 375px
+* 414px
+* Tablet
+* Laptop
+* Desktop
+* Large desktop
+
+No horizontal scrolling.
+
+Buttons must remain easy to tap.
+
+Tool interfaces must work comfortably on mobile.
+
+---
+
+# 27. ANIMATIONS
+
+Use subtle animations only.
+
+Examples:
+
+* Card hover
+* Button hover
+* Page transitions
+* Tool result appearance
+* Upload interaction
+* Toast notifications
+
+Use CSS transitions or lightweight animation libraries if necessary.
+
+Do NOT make the site heavy or slow.
+
+Respect `prefers-reduced-motion`.
+
+---
+
+# 28. ACCESSIBILITY
+
+Follow good accessibility practices.
+
+Include:
+
+* Semantic HTML
+* Proper labels
+* Keyboard navigation
+* Focus states
+* ARIA where needed
+* Good contrast
+* Accessible buttons
+* Accessible file upload controls
+
+Do not rely only on color to communicate information.
+
+---
+
+# 29. SEO
+
+Make Toolora SEO-friendly.
+
+Each tool should have:
+
+* Unique page title
+* Meta description
+* Proper H1
+* Semantic headings
+* Canonical-friendly structure
+* Open Graph metadata
+* Twitter/X card metadata
+
+Example title:
+
+**Image Compressor — Free Online Tool | Toolora**
+
+Example:
+
+**JSON Formatter — Free Online JSON Tool | Toolora**
+
+Create a sitemap-friendly architecture.
+
+If using Next.js, use its metadata API.
+
+---
+
+# 30. PERFORMANCE
+
+Optimize for fast loading.
+
+Requirements:
+
+* Avoid unnecessary dependencies
+* Lazy-load heavy tool libraries
+* Avoid loading PDF/image libraries globally
+* Code split tool pages where possible
+* Optimize icons
+* Avoid huge assets
+* Keep initial JavaScript bundle reasonable
+
+Heavy libraries should load only when the relevant tool is opened.
+
+---
+
+# 31. FOOTER
+
+Create a polished footer.
+
+Include:
+
+### Toolora
+
+**Simple tools. Zero hassle.**
+
+Categories:
+
+* Image Tools
+* PDF Tools
+* Text Tools
+* Developer Tools
+* Security Tools
+* Color Tools
+
+Company:
+
+* About
+* Privacy
+* Terms
+
+Social:
+
+### X
+
+Link:
+
+https://x.com/anoinv
+
+The X link must open in a new tab using appropriate secure link attributes.
+
+Use a proper X/Twitter-style icon.
+
+Footer should look premium and minimal.
+
+---
+
+# 32. ABOUT PAGE
+
+Create:
+
+`/about`
+
+Explain what Toolora is:
+
+**"Toolora is a collection of simple, fast, and free online tools built to make everyday digital tasks easier."**
+
+Keep the page simple and visually consistent.
+
+---
+
+# 33. PRIVACY PAGE
+
+Create:
+
+`/privacy`
+
+Explain:
+
+* What Toolora processes
+* Browser-side processing
+* No unnecessary data collection
+* File handling
+* Cookies/local storage if used
+* Third-party services if any
+
+Do not make legal claims that aren't implemented.
+
+---
+
+# 34. TERMS PAGE
+
+Create:
+
+`/terms`
+
+Use a simple, clear terms page.
+
+Include appropriate disclaimer that tools are provided for general use and users are responsible for their files/data.
+
+---
+
+# 35. 404 PAGE
+
+Create a beautiful custom 404 page.
+
+Example:
+
+**"Looks like this tool doesn't exist."**
+
+Button:
+
+**Back to Toolora**
+
+---
+
+# 36. SEARCH
+
+Implement global tool search.
+
+Search should instantly filter tools.
+
+Examples:
+
+Typing:
+
+`image`
+
+should show:
+
+* Image Compressor
+* Image Resizer
+* Image Cropper
+* Image Converter
+* Image to PDF
+* Image Color Picker
+
+Typing:
+
+`json`
+
+should show JSON tools.
+
+Show a clean empty state if no result exists.
+
+---
+
+# 37. RECENT / FAVORITE TOOLS
+
+Implement lightweight browser-local functionality.
+
+Users should be able to:
+
+* Favorite tools
+* See recently used tools
+
+Store this only in localStorage.
+
+No account required.
+
+---
+
+# 38. NO LOGIN REQUIRED
+
+Do not create authentication.
+
+Toolora should be usable immediately.
+
+No mandatory signup.
+
+No paywall.
+
+No watermark.
+
+---
+
+# 39. ERROR HANDLING
+
+Never allow an error to break the whole application.
+
+If a file is invalid:
+
+Show:
+
+**"This file couldn't be processed. Please try another file."**
+
+If a browser does not support a feature:
+
+Show a clear fallback message.
+
+Handle:
+
+* Invalid files
+* Oversized files
+* Invalid JSON
+* Invalid URLs
+* Invalid numbers
+* Empty input
+* Unsupported formats
+
+---
+
+# 40. COMPONENT ARCHITECTURE
+
+Use reusable components.
+
+Create components such as:
+
+* Navbar
+* Footer
+* ToolCard
+* CategoryCard
+* SearchBar
+* ToolLayout
+* FileDropzone
+* FileList
+* DownloadButton
+* CopyButton
+* Toast
+* Breadcrumb
+* FAQ
+* RelatedTools
+* EmptyState
+* ErrorState
+
+Do not duplicate UI code unnecessarily.
+
+---
+
+# 41. DATA ARCHITECTURE
+
+Create a centralized tool registry/data structure.
+
+Each tool should contain:
+
+* id
+* name
+* slug
+* category
+* description
+* icon
+* keywords
+* route
+* popularity
+* status
+
+This should power:
+
+* Homepage
+* Search
+* Categories
+* Tools page
+* Related tools
+* Footer links
+
+Do NOT hardcode tool cards repeatedly across multiple pages.
+
+---
+
+# 42. ICONS
+
+Use a consistent icon library such as Lucide React.
+
+Do not use random emojis as the primary UI icon system.
+
+Icons should be simple, clean, and consistent.
+
+---
+
+# 43. DARK MODE
+
+Do NOT prioritize dark mode in the first version.
+
+The primary experience should be the clean light theme described above.
+
+Structure the CSS so dark mode can be added later without rewriting the whole application.
+
+---
+
+# 44. MOBILE NAVIGATION
+
+On mobile:
+
+Logo left.
+
+Menu button right.
+
+Open a clean navigation panel containing:
+
+* Tools
+* Categories
+* About
+* Search
+
+---
+
+# 45. HOMEPAGE LOWER SECTION
+
+Add a simple section:
+
+**Why Toolora?**
+
+Three cards:
+
+### ⚡ Fast
+
+"Most tools run directly in your browser."
+
+### 🔒 Private
+
+"Where possible, your files stay on your device."
+
+### 🆓 Free
+
+"No signup, no watermark, no unnecessary limits."
+
+Only make claims that are technically accurate.
+
+---
+
+# 46. FINAL CTA
+
+Near the bottom of homepage:
+
+**"Need a tool? We've probably got one."**
+
+Supporting text:
+
+"Explore the Toolora collection and get things done without the hassle."
+
+Button:
+
+**Explore all tools**
+
+---
+
+# 47. VISUAL DETAILS
+
+Use:
+
+* Border radius around 18–28px for major cards
+* Smaller radius for controls where appropriate
+* Thin subtle borders
+* Very subtle shadows
+* Large whitespace
+* Strong typography
+* Green accent
+* Smooth transitions
+
+Cards should have a slight hover effect:
+
+* Small upward movement
+* Slight border/accent change
+* Arrow movement
+
+Do not overanimate.
+
+---
+
+# 48. SECURITY
+
+Do not execute arbitrary user-provided code.
+
+For developer tools:
+
+* Never use unsafe `eval()` for user input
+* Sanitize rendered content
+* Avoid XSS
+* Safely handle HTML previews
+* Validate inputs
+
+For tools that process files, validate file types and sizes.
+
+---
+
+# 49. BROWSER-FIRST ARCHITECTURE
+
+Whenever possible:
+
+Use browser APIs such as:
+
+* File API
+* Canvas
+* Web Crypto API
+* Blob
+* URL.createObjectURL
+* Web Workers when useful
+
+This reduces backend requirements and makes Vercel deployment easier.
+
+If a third-party library is required, use a reputable maintained open-source library.
+
+---
+
+# 50. PROJECT STRUCTURE
+
+Use a clean scalable structure.
+
+For example:
+
+app/
+components/
+lib/
+utils/
+data/
+public/
+styles/
+
+Keep tool-specific logic modular.
+
+Do not put everything inside one huge file.
+
+---
+
+# 51. CODE QUALITY
+
+Write production-quality TypeScript.
+
+Requirements:
+
+* Strong typing
+* Reusable components
+* Clean naming
+* No unnecessary duplication
+* No dead code
+* No fake placeholder functionality
+* No console errors
+* No broken links
+* No TypeScript errors
+
+---
+
+# 52. DEPLOYMENT
+
+Before considering the project complete:
+
+Run:
+
+* npm install
+* npm run build
+
+Fix every build error.
+
+Make sure production build works.
+
+The project should be ready to connect to a Git repository and deploy directly to Vercel.
+
+Do not require special Replit configuration.
+
+---
+
+# 53. README
+
+Create a professional README containing:
+
+* What Toolora is
+* Features
+* Tool categories
+* Tech stack
+* Local development instructions
+* Build instructions
+* Vercel deployment instructions
+* Environment variables if any
+* Project structure
+
+Do not include unnecessary Replit-specific instructions.
+
+---
+
+# 54. FINAL QUALITY CHECK
+
+Before finishing, verify:
+
+### UI
+
+* Clean
+* Premium
+* Responsive
+* Consistent
+* Nearmate-inspired design language without copying it
+
+### Functionality
+
+* Tools actually work
+* Uploads work
+* Downloads work
+* Copy buttons work
+* Search works
+* Filters work
+* Favorites work
+* Recent tools work
+
+### Technical
+
+* TypeScript compiles
+* Production build succeeds
+* No console errors
+* No broken imports
+* No broken routes
+* No localhost dependencies
+* No Replit-only dependencies
+* Vercel compatible
+
+### SEO
+
+* Metadata exists
+* Titles are unique
+* Descriptions are unique
+* Proper H1 structure
+
+### Privacy
+
+* Browser processing wherever possible
+* No fake privacy claims
+
+### Mobile
+
+* Test responsive layouts carefully
+* No horizontal overflow
+* All tools usable on mobile
+
+---
+
+# 55. IMPORTANT EXECUTION INSTRUCTION
+
+Do not stop after creating the homepage.
+
+Build the COMPLETE working website.
+
+Do not create fake placeholder cards for tools that don't work.
+
+Prioritize quality over rushing.
+
+If a feature cannot reasonably be implemented client-side, choose the simplest Vercel-compatible architecture.
+
+Keep dependencies minimal.
+
+Make Toolora feel like a polished real-world product that could be publicly launched.
+
+The final result should look like a professional startup/product website, not an AI-generated template.
+
+Start by setting up the project architecture, design system, reusable components, tool registry, routing, and homepage, then implement the actual tools and supporting pages.
+
+Finally run the production build and fix all errors before declaring the project complete.

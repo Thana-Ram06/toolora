@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Toolora"
+description = "A polished, browser-first collection of free online tools for everyday tasks, creators, students, designers, and developers."
+version = "1.0.0"
+id = "artifacts/toolora"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23533
+
+[services.development]
+run = "pnpm --filter @workspace/toolora run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/toolora", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/toolora/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23533"
+BASE_PATH = "/"

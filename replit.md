@@ -1,12 +1,13 @@
-# [Project name]
+# Toolora
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Toolora is a browser-first collection of free online tools for everyday digital tasks.
 
 ## Run & Operate
 
 - `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
+- `PORT=23533 BASE_PATH=/ pnpm --filter @workspace/toolora run build` — production build for Toolora
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
 - `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
 - Required env: `DATABASE_URL` — Postgres connection string
@@ -22,23 +23,29 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/toolora/src/data/tools.ts` — centralized tool registry
+- `artifacts/toolora/src/components/tool-workspace.tsx` — client-side tool workspaces
+- `artifacts/toolora/src/lib/client-tools.ts` — image, download, and PDF browser helpers
+- `artifacts/toolora/src/index.css` — Toolora visual tokens and global styles
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Toolora is client-only so file contents can remain in the user's browser.
+- Wouter routes are backed by the shared tool registry so library, category, related-tool, and detail views stay consistent.
+- Browser localStorage stores only favorites and recent tool slugs; no account is required.
+- File processing uses Canvas and Blob APIs, while QR/PDF export is lazy at the workspace level.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Toolora provides searchable tools for image processing, text cleanup, developer formatting, local generation, and lightweight utilities. It includes browser-local favorites and recents plus dedicated workspaces for each tool.
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+Toolora should remain lightweight, welcoming, and usable without login or a paywall.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+The Vite build needs `PORT` and `BASE_PATH`; the managed web workflow supplies them automatically.
 
 ## Pointers
 
