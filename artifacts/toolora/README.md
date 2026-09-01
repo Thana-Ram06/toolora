@@ -35,7 +35,7 @@ pnpm install
 pnpm --filter @workspace/toolora run dev
 ```
 
-The app uses the `PORT` and `BASE_PATH` environment variables supplied by the workspace workflow.
+The workspace workflow supplies `PORT` and `BASE_PATH`; both default to `5173` and `/` respectively when running outside Replit.
 
 ## Production build
 

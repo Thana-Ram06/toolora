@@ -1,0 +1,75 @@
+IMPORTANT: I am deploying Toolora to Vercel.
+
+The current Vercel deployment is incorrectly targeting:
+
+artifacts/api-server
+
+and Vercel is detecting it as an Express application.
+
+I do NOT want the Toolora frontend website to be deployed as the Express API server.
+
+Please inspect the ENTIRE repository structure and identify the actual frontend application that contains the Toolora UI.
+
+Then make the project properly Vercel-compatible.
+
+REQUIREMENTS:
+
+1. Identify the actual Toolora frontend app and its correct root directory.
+
+2. Make the frontend independently deployable on Vercel.
+
+3. If this is a monorepo, configure it correctly so the frontend can be deployed from Vercel without depending on a Replit-only runtime.
+
+4. Do NOT remove useful functionality just to make deployment work.
+
+5. Keep the existing Toolora UI, design, routes, tools, and functionality intact.
+
+6. If the Express api-server is not actually required for the current Toolora frontend tools, do not make the frontend depend on it.
+
+7. If the API server IS required by some tools, make the architecture Vercel-compatible using appropriate Vercel-compatible serverless/API routes or another Vercel-compatible approach. Do NOT require a permanently running Express server.
+
+8. Fix all TypeScript/build errors in the repository.
+
+The current backend has these errors:
+
+src/app.ts(10,3):
+TS2349: This expression is not callable.
+Type 'typeof import("pino-http")' has no call signatures.
+
+src/app.ts(13,11):
+TS7006: Parameter 'req' implicitly has an 'any' type.
+
+src/app.ts(20,11):
+TS7006: Parameter 'res' implicitly has an 'any' type.
+
+Fix these properly rather than suppressing TypeScript errors with @ts-ignore or disabling strict type checking.
+
+9. Make sure the frontend does not depend on localhost URLs.
+
+10. Make sure all environment variables required for production are clearly documented.
+
+11. Use browser-side processing wherever possible for Toolora's file tools.
+
+12. Do not use Replit-specific APIs, Replit database services, or Replit-only runtime features.
+
+13. Make the final frontend deployable directly from GitHub to Vercel.
+
+14. Run the production build after making the changes.
+
+Run the equivalent of:
+
+pnpm install
+pnpm run build
+
+and fix EVERY build error.
+
+15. Tell me clearly at the end:
+
+- What is the frontend root directory?
+- What framework is the frontend using?
+- What build command should Vercel use?
+- What output directory should Vercel use, if applicable?
+- Whether any environment variables are required.
+- Whether the project is now ready for Vercel.
+
+DO NOT just explain the problem. ACTUALLY inspect and modify the project and make the required changes.

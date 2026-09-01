@@ -10,7 +10,8 @@ Toolora is a browser-first collection of free online tools for everyday digital 
 - `PORT=23533 BASE_PATH=/ pnpm --filter @workspace/toolora run build` — production build for Toolora
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
 - `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+- API/database development requires `DATABASE_URL` — a Postgres connection string.
+- Toolora's frontend build defaults to `PORT=5173` and `BASE_PATH=/`, so no environment variables are required for a standalone Vercel deployment.
 
 ## Stack
 
@@ -19,7 +20,19 @@ Toolora is a browser-first collection of free online tools for everyday digital 
 - DB: PostgreSQL + Drizzle ORM
 - Validation: Zod (`zod/v4`), `drizzle-zod`
 - API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- Build: Vite (Toolora frontend), esbuild (API server bundle)
+
+## Vercel deployment
+
+Deploy the Toolora frontend as the Vercel project rooted at `artifacts/toolora`.
+
+- Framework preset: Vite
+- Build command: `pnpm run build`
+- Output directory: `dist/public`
+- Environment variables: none required
+- SPA routes are rewritten to `index.html` by `artifacts/toolora/vercel.json`
+
+Toolora is client-only and does not depend on the Express API server, Replit runtime APIs, Replit database services, or localhost URLs.
 
 ## Where things live
 
