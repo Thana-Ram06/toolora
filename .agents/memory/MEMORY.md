@@ -1,0 +1,1 @@
+- [GitHub connector write limits](github-connector-write-limits.md) — repeated or large repository mutations may be Cloudflare-blocked; verify remote contents before claiming success.
