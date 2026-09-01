@@ -1,3 +1,10 @@
 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="180" height="180" rx="36" fill="#FF3C00"/>
+  <rect width="180" height="180" rx="60" fill="hsl(173 30% 30%)"/>
+  <rect x="10" y="10" width="50" height="50" rx="10" fill="hsl(37 80% 74%)"/>
+  <rect x="120" y="120" width="50" height="50" rx="10" fill="hsl(7 74% 68%)"/>
+  <g transform="translate(50 50) scale(3.3333333)" stroke="hsl(40 43% 98%)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/>
+    <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/>
+    <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.59-3.9A1 1 0 0 0 22 17"/>
+  </g>
 </svg>
